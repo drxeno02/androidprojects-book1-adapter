@@ -10,7 +10,7 @@
         android:id="@+id/iv"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:background="@drawable/img2"
+        android:background="@drawable/img"
         android:paddingRight="3dp"
         android:paddingTop="3dp" />
 

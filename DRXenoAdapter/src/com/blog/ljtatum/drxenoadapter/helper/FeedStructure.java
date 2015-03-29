@@ -38,16 +38,16 @@ public class FeedStructure {
 	
 	// truncate title
 	public String shortenTitle(String title) {
-		if (title.length() > 10) {
-			return title.substring(0, 10) + "...";
+		if (title.length() > 30) {
+			return title.substring(0, 30) + "...";
 		}
 		return title;
 	}
 	
 	// truncate description
 	public String shortenDesc(String desc) {
-		if (desc.length() > 30) {
-			return desc.substring(0, 30) + "...";
+		if (desc.length() > 100) {
+			return desc.substring(0, 100) + "...";
 		}
 		return desc;
 	}

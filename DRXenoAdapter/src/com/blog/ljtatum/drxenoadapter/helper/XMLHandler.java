@@ -37,7 +37,6 @@ public class XMLHandler extends DefaultHandler {
 	 * the ARTICLES_LIMIT is value > 20 it will only display 20 items */
 	private static final int ARTICLES_LIMIT = 20;
 
-
 	@Override
 	public void startElement(String uri, String localName, String qName, Attributes atts) 
 			throws SAXException {	
@@ -58,7 +57,7 @@ public class XMLHandler extends DefaultHandler {
 		} else if (localName.equalsIgnoreCase("pubDate")) {
 			feedStr.setPubDate(chars.toString());
 			Log.i(TAG, feedStr.getPubDate());
-		} else if (localName.equalsIgnoreCase("dc:creator")) {
+		} else if (localName.equalsIgnoreCase("creator")) {
 			feedStr.setCreator(chars.toString());
 			Log.i(TAG, feedStr.getCreator());
 		} else if (localName.equalsIgnoreCase("description")) {
@@ -71,6 +70,7 @@ public class XMLHandler extends DefaultHandler {
 		
 		if (localName.equalsIgnoreCase("item")) {
 			rssList.add(feedStr);
+			feedStr = null;
 			acticlesAdded++;
 			if (acticlesAdded >= ARTICLES_LIMIT) {
 				throw new SAXException();
