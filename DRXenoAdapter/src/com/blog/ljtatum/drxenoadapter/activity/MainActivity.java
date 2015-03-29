@@ -30,7 +30,7 @@ public class MainActivity extends Activity implements OnItemClickListener {
 	private static final String TAG = MainActivity.class.getSimpleName();
 	
 	private ListView lv;
-	private List<FeedStructure> listFeedStructure;
+	private static List<FeedStructure> listFeedStructure;
 	private FeedListAdapter adapter;
 	
 	@Override

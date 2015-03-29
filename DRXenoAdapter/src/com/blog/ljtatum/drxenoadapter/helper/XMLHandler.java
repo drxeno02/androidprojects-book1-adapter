@@ -47,7 +47,6 @@ public class XMLHandler extends DefaultHandler {
 	@Override
 	public void endElement(String uri, String localName, String qName) throws SAXException {
 		// TODO Auto-generated method stub
-		
 		if (localName.equalsIgnoreCase("title")) {
 			feedStr.setTitle(chars.toString());
 			Log.i(TAG, feedStr.getTitle());
@@ -70,7 +69,7 @@ public class XMLHandler extends DefaultHandler {
 		
 		if (localName.equalsIgnoreCase("item")) {
 			rssList.add(feedStr);
-			feedStr = null;
+			feedStr = new FeedStructure();
 			acticlesAdded++;
 			if (acticlesAdded >= ARTICLES_LIMIT) {
 				throw new SAXException();
