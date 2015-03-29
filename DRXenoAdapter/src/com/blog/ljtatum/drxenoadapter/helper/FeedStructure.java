@@ -6,103 +6,100 @@
 
 package com.blog.ljtatum.drxenoadapter.helper;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class FeedStructure {
 
-	private String title;
-	private String link;
-	private String pubDate;
-	private String imgLink;
-	private String creator;
-	private String desc;
-	private long item;
+	private String mTitle;
+	private String mLink;
+	private String mPubDate;
+	private String mImgLink;
+	private String mCreator;
+	private String mDesc;
+	private long mItem;
 
 	//@param item set item
 	public void setItem(long item) {
-		this.item = item;
+		this.mItem = item;
 	}
 	
 	//@return item
 	public long getItem() {
-		return item;
+		return mItem;
 	}
 
 	//@param title set title
 	public void setTitle(String title) {
-		this.title = title;
+		this.mTitle = shortenTitle(title);
 	}
 	
 	//@return title
 	public String getTitle() {
-		return title;
+		return mTitle;
 	}
 	
-	//truncate title
-	public String shortenTitle() {
+	// truncate title
+	public String shortenTitle(String title) {
 		if (title.length() > 10) {
 			return title.substring(0, 10) + "...";
 		}
 		return title;
 	}
 	
-	//truncate description
-	public String shortenDesc() {
-		if (title.length() > 30) {
-			return title.substring(0, 30) + "...";
+	// truncate description
+	public String shortenDesc(String desc) {
+		if (desc.length() > 30) {
+			return desc.substring(0, 30) + "...";
 		}
-		return title;
+		return desc;
 	}
 	
 	//@param pubDate set pubDate
 	public void setPubDate(String pubDate) {
-		this.pubDate = pubDate;
+		this.mPubDate = pubDate;
 	}
 	
 	//@return pubDate
 	public String getPubDate() {
-		return pubDate;
+		return mPubDate;
 	}
 	
 	//@param imgLink set imgLink
 	public void setImgLink(String imgLink) {
-		this.imgLink = imgLink;
+		this.mImgLink = imgLink;
 	}
 	
 	//@return imgLink
 	public String getImgLink() {
-		return imgLink;
+		return mImgLink;
 	}
 	
 	//@param creator set creator
 	public void setCreator(String creator) {
-		this.creator = creator;
+		this.mCreator = creator;
 	}
 	
 	//@return creator
 	public String getCreator() {
-		return creator;
+		return mCreator;
 	}	
 	
 	//@param creator set URL
 	public void setLink(String link) {
-		this.link = link;
+		this.mLink = link;
 	}
 	
 	//@return URL
 	public String getLink() {
-		return link;
+		return mLink;
 	}
 	
 	//@param desc set description
 	public void setDesc(String desc) {
-		this.desc = desc;
+		this.mDesc = shortenDesc(desc);
 	}
 	
 	//@return description
 	public String getDesc() {
-		return desc;
+		return mDesc;
 	}
 	
 }
