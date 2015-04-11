@@ -1,5 +1,4 @@
-# androidprojects-book1-adapter
-BSD license
+# BSD license
 Copyright (c) 2015 Leonard Tatum and Arindam Pal. All rights reserved.
 
 Redistribution and use in source and binary forms are permitted provided that the above 
