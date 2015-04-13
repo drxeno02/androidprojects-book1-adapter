@@ -62,14 +62,15 @@ public class MainActivity extends Activity implements OnItemClickListener {
 	// setup AsyncTask
 	private class RssFeedTask extends AsyncTask<String, Void, String> {
 		
-		private ProgressDialog Dialog;
+		private ProgressDialog dialog;
 		String response = "";
 		
 		@Override
 		protected void onPreExecute() {
-			Dialog = new ProgressDialog(MainActivity.this);
-			Dialog.setMessage("Loading Feeds...");
-			Dialog.show();
+			dialog = new ProgressDialog(MainActivity.this);
+			dialog.setMessage("Loading Feeds...");
+			dialog.setCancelable(false);
+			dialog.show();
 		}
 		
 		@Override 
@@ -90,7 +91,7 @@ public class MainActivity extends Activity implements OnItemClickListener {
 				adapter = new FeedListAdapter(MainActivity.this, listFeedStructure);
 				lv.setAdapter(adapter);
 			}
-			Dialog.dismiss();
+			dialog.dismiss();
 		}	
 	}		
 }

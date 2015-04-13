@@ -50,7 +50,7 @@ public class FeedListAdapter extends ArrayAdapter<FeedStructure> {
 		if (Utils.checkIfNull(view)) {
 			Activity activity = (Activity) getContext();
 			LayoutInflater inflater = activity.getLayoutInflater();
-			view = inflater.inflate(R.layout.item_main, null);
+			view = inflater.inflate(R.layout.item_main, parent, false);
 			holder = new ViewHolder();
 			
 			holder.tvTitle = (TextView) view.findViewById(R.id.tv_title);
