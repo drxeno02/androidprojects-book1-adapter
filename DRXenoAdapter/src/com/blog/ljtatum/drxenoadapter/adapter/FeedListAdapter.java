@@ -94,7 +94,7 @@ public class FeedListAdapter extends ArrayAdapter<FeedStructure> {
 					Bitmap img = getBitmapFromURL(url);
 					holder.iv.setImageBitmap(img);
 				} else {
-					holder.iv.setBackgroundResource(R.drawable.img);
+					holder.iv.setImageResource(R.drawable.img);
 				}
 			}
 		} catch (MalformedURLException e) { 
