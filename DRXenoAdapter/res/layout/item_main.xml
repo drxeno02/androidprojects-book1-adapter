@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
     android:paddingLeft="5dp"
@@ -18,7 +18,7 @@
 
     <TextView
         android:id="@+id/tv_title"
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_toRightOf="@+id/iv"
         android:clickable="true"
@@ -32,7 +32,7 @@
 
     <TextView
         android:id="@+id/tv_creator"
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@id/tv_title"
         android:layout_below="@id/tv_title"
@@ -45,7 +45,7 @@
 
     <TextView
         android:id="@+id/tv_date"
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@id/tv_title"
         android:layout_below="@id/tv_creator"
@@ -58,7 +58,7 @@
 
     <TextView
         android:id="@+id/tv_desc"
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@id/tv_title"
         android:layout_below="@id/tv_date"
